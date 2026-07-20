@@ -1,0 +1,17 @@
+name: MagicSpellsTeams
+version: $project.ext.magicspellsData.stringVersionTeams
+main: com.nisovin.magicspells.teams.MagicSpellsTeams
+authors: [nisovin, TheComputerGeek2]
+depend: [MagicSpells]
+commands:
+    magicspellsteams:
+        usage: |
+            /<command> <create|new|make> <teamname> - makes a new team
+            /<command> list - lists the existing teams
+            /<command> <info|about> <name> - shows setup information about a team
+        permission: magicspellsteams.manage
+        description: Base command for team management.
+permissions:
+    magicspellsteams.manage:
+        default: op
+        description: Manage teams from in game.
