@@ -188,9 +188,6 @@ public class MagicSpells extends JavaPlugin {
 	
 	public boolean cycleSpellsOnOffhandAction;
 	
-	// Anticheat software integration
-	public boolean allowAnticheatIntegrations;
-	
 	@Override
 	public void onEnable() {
 		load();
@@ -360,8 +357,6 @@ public class MagicSpells extends JavaPlugin {
 		strWrongWorld = config.getString("general.str-wrong-world", "You cannot cast that spell here.");
 		strConsoleName = config.getString("general.console-name", "Admin");
 		strXpAutoLearned = config.getString("general.str-xp-auto-learned", "You have learned the %s spell!");
-		
-		allowAnticheatIntegrations = config.getBoolean("general.allow-anticheat-integrations", false);
 		
 		enableManaBars = config.getBoolean("mana.enable-mana-system", false);
 		manaPotionCooldown = config.getInt("mana.mana-potion-cooldown", 30);
@@ -622,8 +617,6 @@ public class MagicSpells extends JavaPlugin {
 			profilingTotalTime = new HashMap<>();
 			profilingRuns = new HashMap<>();
 		}
-		
-		CompatBasics.setupExemptionAssistant();
 		
 		// Call loaded event
 		pm.callEvent(new MagicSpellsLoadedEvent(this));
@@ -1355,7 +1348,6 @@ public class MagicSpells extends JavaPlugin {
 		effectManager = null;
 		ModifierSet.unload();
 		PromptType.unloadDestructPromptData();
-		CompatBasics.destructExemptionAssistant();
 	}
 	
 	@Override
@@ -1378,6 +1370,6 @@ public class MagicSpells extends JavaPlugin {
  * 
  * - Use MagicPlayer (Caster/PlayerCaster) across the entire plugin
  * - Allow spells to be cast by something other than players, like blocks and other entities
- * - Move NoMagicZoneWorldGuard and NoMagicZoneResidence outside of the core plugin
+ * - Move NoMagicZoneWorldGuard outside of the core plugin
  * 
  */

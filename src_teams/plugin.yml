@@ -1,5 +1,5 @@
 name: MagicSpellsTeams
-version: $project.ext.magicspellsData.stringVersionTeams
+version: $magicspellsVersion
 main: com.nisovin.magicspells.teams.MagicSpellsTeams
 authors: [nisovin, TheComputerGeek2]
 depend: [MagicSpells]

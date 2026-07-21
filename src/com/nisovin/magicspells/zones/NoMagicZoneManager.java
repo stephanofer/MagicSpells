@@ -25,7 +25,6 @@ public class NoMagicZoneManager {
 		this.zoneTypes = new HashMap<>();
 		this.zoneTypes.put("cuboid", NoMagicZoneCuboid.class);
 		this.zoneTypes.put("worldguard", NoMagicZoneWorldGuard.class);
-		this.zoneTypes.put("residence", NoMagicZoneResidence.class);
 	}
 	
 	// DEBUG INFO: level 3, loaded no magic zone, zonename

@@ -1,5 +1,5 @@
 name: MagicSpellsTowny
 main: com.nisovin.magicspells.towny.MagicSpellsTowny
-version: $project.ext.magicspellsData.stringVersionTowny
+version: $magicspellsVersion
 author: nisovin
 depend: [MagicSpells,Towny]

@@ -41,7 +41,6 @@ check-world-pvp-flag: true
 cast-on-animate: false
 use-exp-bar-as-cast-time-bar: true
 cooldowns-persist-through-reload: true
-allow-anticheat-integrations: false
 ignore-grant-perms-fake-value: true
 
 entity-names:
